@@ -1,0 +1,23 @@
+<div class="login-container">
+  <div class="login-content">
+    <mat-toolbar class="login-toolbar" color="primary">My App</mat-toolbar>
+    <mat-card>
+      <form [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()">
+        <mat-form-field class="example-full-width">
+         <mat-icon matPrefix>person_outline</mat-icon>
+          <input autofocus matInput type="text" placeholder="abc@gmail.com" formControlName="email">
+          <mat-error *ngIf="primEmail.errors" class="text-danger">
+            Please provide a valid email address
+          </mat-error>
+          <mat-error *ngIf="hasError('email', 'required')">Email is required</mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-icon matPrefix>lock_outline</mat-icon>
+          <input type="password" autocomplete="false" matInput placeholder="Password"  formControlName="password">
+        </mat-form-field>
+
+        <button type="submit" mat-raised-button color="primary">Login</button>
+      </form>
+    </mat-card>
+  </div>
+</div>

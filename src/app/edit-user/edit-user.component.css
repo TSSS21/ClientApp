@@ -1,0 +1,16 @@
+.close-icon {
+  transition: 1s ease-in-out;
+
+}
+
+.close-icon:hover {
+  transform: rotate(180deg);
+}
+.footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 10px 24px;
+}

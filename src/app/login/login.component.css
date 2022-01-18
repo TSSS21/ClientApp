@@ -1,0 +1,33 @@
+.login-container {
+  position: fixed;
+  top: 50%;
+  left: 40%;
+  margin-top: -180px;
+  margin-left: -100px;
+}
+
+form {
+  width: 100%;
+}
+
+.login-content {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+
+}
+
+.login-toolbar {
+  justify-content: center;
+}
+
+.example-full-width {
+  width: 100%;
+  display: block;
+  padding: 10px;
+}
+
+.mat-raised-button {
+  width: 100%;
+  margin-top: 15px;
+}

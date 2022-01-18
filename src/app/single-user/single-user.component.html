@@ -1,0 +1,68 @@
+<div class="container-fluid">
+  <form [formGroup]="detailUser" (ngSubmit)="updateUser()" #myForm="ngForm">
+    <h2 class="row justify-content-center" style="margin-top: 40px;">Single User Information</h2>
+    <div class="form-group mt-5">
+      <input type="hidden" formControlName="id" class="form-control" placeholder="ID">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="form-group col-md-6 col-md-offset-5 align-center">
+            <input type="text" disabled formControlName="first_name" class="form-control" placeholder="Enter your First Name">
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="form-group col-md-6 col-md-offset-5 align-center">
+            <div *ngIf="detailUser.controls['first_name'].invalid && (detailUser.controls['first_name'].dirty || detailUser.controls['first_name'].touched)" class="alert alert-danger">
+              <div *ngIf="detailUser.controls['first_name'].errors.required">
+                <span>User Name is required.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="form-group col-md-6 col-md-offset-5 align-center">
+            <input  disabled type="text" formControlName="last_name" class="form-control" placeholder="Enter your Last Name">
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="form-group col-md-6 col-md-offset-5 align-center">
+            <div *ngIf="detailUser.controls['last_name'].invalid && (detailUser.controls['last_name'].dirty || detailUser.controls['last_name'].touched)" class="alert alert-danger">
+              <div *ngIf="detailUser.controls['last_name'].errors.required">
+                <span> Password is required.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="form-group col-md-6 col-md-offset-5 align-center">
+            <input disabled type="email" formControlName="email" class="form-control" placeholder="Enter your Email">
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="form-group col-md-6 col-md-offset-5 align-center">
+            <div *ngIf="detailUser.controls['email'].invalid && (detailUser.controls['email'].dirty || detailUser.controls['email'].touched)" class="alert alert-danger">
+              <div *ngIf="detailUser.controls['email'].errors.required">
+                <span>email is required.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <button  class="btn btn-primary"[routerLink]="['/Users']" style=" margin-left: 355px" (click)="onNoClick()">
+            Go Back
+          </button>
+        </div>
+      </div>
+
+
+   </div>
+  </form>
+</div>
